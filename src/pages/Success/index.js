@@ -233,7 +233,7 @@ export default function Success({ navigation, route }) {
                                     await BluetoothEscposPrinter.printColumn(
                                         [15],
                                         [BluetoothEscposPrinter.ALIGN.CENTER],
-                                        ['HM Motor'],
+                                        ['Toko Edi Nias'],
                                         {
                                             encoding: 'GBK',
                                             codepage: 0,
@@ -246,13 +246,13 @@ export default function Success({ navigation, route }) {
                                     await BluetoothEscposPrinter.printColumn(
                                         [32],
                                         [BluetoothEscposPrinter.ALIGN.CENTER],
-                                        ['Banjarbaru, Kalimantan Selatan'],
+                                        ['Pasar Induk Tanah Tinggi Tangerang Blok C12/No. 1'],
                                         {},
                                     );
                                     await BluetoothEscposPrinter.printColumn(
                                         [32],
                                         [BluetoothEscposPrinter.ALIGN.CENTER],
-                                        ['Tlp +6285715514097'],
+                                        ['Tlp +6281322220292'],
                                         {},
                                     );
                                     await BluetoothEscposPrinter.printText(

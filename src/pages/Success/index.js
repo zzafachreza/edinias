@@ -38,6 +38,8 @@ export default function Success({ navigation, route }) {
     const cart = route.params.cart;
     console.log(route.params);
 
+    const [open, setOpen] = useState(false);
+
 
     const [paired, setPaired] = useState({});
     const [data, setData] = useState({
@@ -69,13 +71,14 @@ export default function Success({ navigation, route }) {
 
     const __getDetail = () => {
 
-
+        console.log(route.paramas)
         axios.post(apiURL + 'transaksi_detail_print', {
-            fid_user: route.params.fid_user
+            fid_user: route.params.trx.fid_user
         }).then(res => {
 
             console.log(res.data)
             setData(res.data);
+            setOpen(true)
 
         })
 
@@ -215,13 +218,14 @@ export default function Success({ navigation, route }) {
 
                 </View>
             </View>
-            <View style={{
+            {open && <View style={{
                 // flex: 0.4,
                 margin: 10,
             }}>
                 <MyButton warna='transparent' borderSize={1}
 
                     onPress={async () => {
+                        console.log(data)
                         BluetoothManager.connect(paired.inner_mac_address)
                             .then(async (s) => {
                                 console.log(s);
@@ -358,7 +362,7 @@ export default function Success({ navigation, route }) {
                     title="Cetak Struk" colorText={colors.primary} iconColor={colors.primary} Icons='print' />
                 <MyGap jarak={10} />
                 <MyButton title="Mulai Transaksi Baru" Icons='cart' onPress={() => navigation.replace('Transaksi')} />
-            </View>
+            </View>}
         </SafeAreaView>
     )
 }

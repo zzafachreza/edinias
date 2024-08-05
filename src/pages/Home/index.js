@@ -119,7 +119,7 @@ export default function Home({ navigation }) {
             flex: 1,
             fontSize: 22,
             fontFamily: fonts.secondary[600],
-          }}>Manajemen</Text>
+          }}>Stok Barang</Text>
         </TouchableOpacity>
 
         <TouchableOpacity onPress={() => navigation.navigate('Transaksi')} style={{

@@ -92,19 +92,7 @@ export default function AAAtur({ navigation }) {
                     <Icon type='ionicon' name='chevron-forward' color={colors.black} />
                 </TouchableOpacity>
 
-                <TouchableOpacity onPress={() => navigation.navigate('Home')} style={{
-                    flexDirection: 'row',
-                    padding: 20,
-                    marginVertical: 2
-                }}>
-                    <Text style={{
-                        flex: 1,
-                        fontFamily: fonts.primary[600],
-                        fontSize: windowWidth / 20,
-                        color: colors.black
-                    }}>Beranda</Text>
-                    <Icon type='ionicon' name='chevron-forward' color={colors.black} />
-                </TouchableOpacity>
+
                 <TouchableOpacity onPress={() => navigation.navigate('Laporan')} style={{
                     flexDirection: 'row',
                     padding: 20,
@@ -165,7 +153,7 @@ export default function AAAtur({ navigation }) {
             <View style={{
                 padding: 20,
             }}>
-                <MyButton onPress={btnKeluar} warna={colors.black} title="Keluar" Icons="log-out" iconColor={colors.white} colorText={colors.white} />
+                <MyButton onPress={btnKeluar} warna={colors.black} title="Logout" Icons="log-out" iconColor={colors.white} colorText={colors.white} />
             </View>
         </SafeAreaView>
     )

@@ -201,7 +201,7 @@ export default function Transaksi({ navigation, route }) {
                     {/* data barang */}
 
                 </View>
-                <TouchableOpacity onPress={() => {
+                {/* <TouchableOpacity onPress={() => {
                     ZavalabsScanner.showBarcodeReader(result => {
 
                         if (result !== null) {
@@ -229,7 +229,7 @@ export default function Transaksi({ navigation, route }) {
                         resizeMode: 'contain',
                         height: 40,
                     }} />
-                </TouchableOpacity>
+                </TouchableOpacity> */}
             </View>
             {
                 key.length > 0 && produk.length > 0 && <View style={{
